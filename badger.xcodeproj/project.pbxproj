@@ -7,7 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		2FA9618A2994486D00F9D5E1 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FA961892994486D00F9D5E1 /* main.swift */; };
+		2FA9618A2994486D00F9D5E1 /* badger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FA961892994486D00F9D5E1 /* badger.swift */; };
+		2FA96192299448A800F9D5E1 /* ArgumentParser in Frameworks */ = {isa = PBXBuildFile; productRef = 2FA96191299448A800F9D5E1 /* ArgumentParser */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -23,8 +24,10 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		2FA961862994486D00F9D5E1 /* badgeicon */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = badgeicon; sourceTree = BUILT_PRODUCTS_DIR; };
-		2FA961892994486D00F9D5E1 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
+		2FA961862994486D00F9D5E1 /* badger */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = badger; sourceTree = BUILT_PRODUCTS_DIR; };
+		2FA961892994486D00F9D5E1 /* badger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = badger.swift; sourceTree = "<group>"; };
+		2FAD5DBF29A1D27C0092A4BF /* LICENSE */ = {isa = PBXFileReference; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
+		2FCB41F429A1D01300A519CA /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -32,6 +35,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2FA96192299448A800F9D5E1 /* ArgumentParser in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -41,7 +45,9 @@
 		2FA9617D2994486D00F9D5E1 = {
 			isa = PBXGroup;
 			children = (
-				2FA961882994486D00F9D5E1 /* badgeicon */,
+				2FAD5DBF29A1D27C0092A4BF /* LICENSE */,
+				2FCB41F429A1D01300A519CA /* README.md */,
+				2FA961882994486D00F9D5E1 /* badger */,
 				2FA961872994486D00F9D5E1 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -49,25 +55,25 @@
 		2FA961872994486D00F9D5E1 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				2FA961862994486D00F9D5E1 /* badgeicon */,
+				2FA961862994486D00F9D5E1 /* badger */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		2FA961882994486D00F9D5E1 /* badgeicon */ = {
+		2FA961882994486D00F9D5E1 /* badger */ = {
 			isa = PBXGroup;
 			children = (
-				2FA961892994486D00F9D5E1 /* main.swift */,
+				2FA961892994486D00F9D5E1 /* badger.swift */,
 			);
-			path = badgeicon;
+			path = badger;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		2FA961852994486D00F9D5E1 /* badgeicon */ = {
+		2FA961852994486D00F9D5E1 /* badger */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 2FA9618D2994486D00F9D5E1 /* Build configuration list for PBXNativeTarget "badgeicon" */;
+			buildConfigurationList = 2FA9618D2994486D00F9D5E1 /* Build configuration list for PBXNativeTarget "badger" */;
 			buildPhases = (
 				2FA961822994486D00F9D5E1 /* Sources */,
 				2FA961832994486D00F9D5E1 /* Frameworks */,
@@ -77,9 +83,12 @@
 			);
 			dependencies = (
 			);
-			name = badgeicon;
-			productName = badgeicon;
-			productReference = 2FA961862994486D00F9D5E1 /* badgeicon */;
+			name = badger;
+			packageProductDependencies = (
+				2FA96191299448A800F9D5E1 /* ArgumentParser */,
+			);
+			productName = badger;
+			productReference = 2FA961862994486D00F9D5E1 /* badger */;
 			productType = "com.apple.product-type.tool";
 		};
 /* End PBXNativeTarget section */
@@ -97,7 +106,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 2FA961812994486D00F9D5E1 /* Build configuration list for PBXProject "badgeicon" */;
+			buildConfigurationList = 2FA961812994486D00F9D5E1 /* Build configuration list for PBXProject "badger" */;
 			compatibilityVersion = "Xcode 14.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -106,11 +115,14 @@
 				Base,
 			);
 			mainGroup = 2FA9617D2994486D00F9D5E1;
+			packageReferences = (
+				2FA96190299448A800F9D5E1 /* XCRemoteSwiftPackageReference "swift-argument-parser" */,
+			);
 			productRefGroup = 2FA961872994486D00F9D5E1 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				2FA961852994486D00F9D5E1 /* badgeicon */,
+				2FA961852994486D00F9D5E1 /* badger */,
 			);
 		};
 /* End PBXProject section */
@@ -120,7 +132,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2FA9618A2994486D00F9D5E1 /* main.swift in Sources */,
+				2FA9618A2994486D00F9D5E1 /* badger.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -243,10 +255,11 @@
 		2FA9618E2994486D00F9D5E1 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = C6P7B2JYY5;
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = "";
 				ENABLE_HARDENED_RUNTIME = YES;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 5.0;
 			};
 			name = Debug;
@@ -254,10 +267,11 @@
 		2FA9618F2994486D00F9D5E1 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = C6P7B2JYY5;
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = "";
 				ENABLE_HARDENED_RUNTIME = YES;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 5.0;
 			};
 			name = Release;
@@ -265,7 +279,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		2FA961812994486D00F9D5E1 /* Build configuration list for PBXProject "badgeicon" */ = {
+		2FA961812994486D00F9D5E1 /* Build configuration list for PBXProject "badger" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				2FA9618B2994486D00F9D5E1 /* Debug */,
@@ -274,7 +288,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		2FA9618D2994486D00F9D5E1 /* Build configuration list for PBXNativeTarget "badgeicon" */ = {
+		2FA9618D2994486D00F9D5E1 /* Build configuration list for PBXNativeTarget "badger" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				2FA9618E2994486D00F9D5E1 /* Debug */,
@@ -284,6 +298,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		2FA96190299448A800F9D5E1 /* XCRemoteSwiftPackageReference "swift-argument-parser" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/apple/swift-argument-parser.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		2FA96191299448A800F9D5E1 /* ArgumentParser */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 2FA96190299448A800F9D5E1 /* XCRemoteSwiftPackageReference "swift-argument-parser" */;
+			productName = ArgumentParser;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 2FA9617E2994486D00F9D5E1 /* Project object */;
 }
