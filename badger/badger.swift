@@ -48,6 +48,10 @@ struct Badger: ParsableCommand {
 	
 	@Option(name: .shortAndLong, help: "text position y coordinate. Optional.")
 	var yOffset: Double = 10
+    
+    @Option(name: [.customShort("c"), .customLong("color")],
+            help: "Color of the text to use (RGB, RRGGBB or RRGGBBAA); default is red. Optional.")
+    var colorName: String?
 	
 	@Flag(name: .shortAndLong, help: "extra logging.")
 	var verbose: Bool = false
@@ -111,8 +115,9 @@ extension Badger {
 		context.setTextDrawingMode(CGTextDrawingMode.fill)
 		context.setBlendMode(.copy)
 		
-		// TODO: let user pass in the color
-		context.setFillColor(CGColor(red: 1.0, green: 0.0, blue: 0.0, alpha: 1.0))
+        let color = colorName.flatMap { CGColor.color(hexString: $0) } ??
+            CGColor(red: 1.0, green: 0.0, blue: 0.0, alpha: 1.0)
+		context.setFillColor(color)
 		
 		context.textPosition = CGPoint(x: xOffset, y: yOffset)
 		
@@ -135,4 +140,29 @@ extension Badger {
 		
 		if verbose { print("done") }
 	}
+}
+
+// MARK: - Extensions (move to distinct files?)
+
+extension CGColor {
+    
+    /// Creates a CGColor from a string like "RGB", "RRGGBB" or "RRGGBBAA".
+    static func color(hexString: String) -> CGColor? {
+        let hex = hexString.trimmingCharacters(in: CharacterSet.alphanumerics.inverted)
+        var int = UInt64()
+        Scanner(string: hex).scanHexInt64(&int)
+        let a, r, g, b: UInt64
+        switch hex.count {
+        case 3: // RGB (12-bit)
+            (a, r, g, b) = (255, (int >> 8) * 17, (int >> 4 & 0xF) * 17, (int & 0xF) * 17)
+        case 6: // RGB (24-bit)
+            (a, r, g, b) = (255, int >> 16, int >> 8 & 0xFF, int & 0xFF)
+        case 8: // RGBA (32-bit)
+            (r, g, b, a) = (int >> 24, int >> 16 & 0xFF, int >> 8 & 0xFF, int & 0xFF)
+        default:
+            return nil
+        }
+        return self.init(red: CGFloat(r) / 255, green: CGFloat(g) / 255, blue: CGFloat(b) / 255, alpha: CGFloat(a) / 255)
+    }
+    
 }
