@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		2FA9618A2994486D00F9D5E1 /* badger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FA961892994486D00F9D5E1 /* badger.swift */; };
+		2FA9618A2994486D00F9D5E1 /* Badger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FA961892994486D00F9D5E1 /* Badger.swift */; };
 		2FA96192299448A800F9D5E1 /* ArgumentParser in Frameworks */ = {isa = PBXBuildFile; productRef = 2FA96191299448A800F9D5E1 /* ArgumentParser */; };
 /* End PBXBuildFile section */
 
@@ -25,7 +25,7 @@
 
 /* Begin PBXFileReference section */
 		2FA961862994486D00F9D5E1 /* badger */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = badger; sourceTree = BUILT_PRODUCTS_DIR; };
-		2FA961892994486D00F9D5E1 /* badger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = badger.swift; sourceTree = "<group>"; };
+		2FA961892994486D00F9D5E1 /* Badger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Badger.swift; path = ../Sources/Badger/Badger.swift; sourceTree = "<group>"; };
 		2FAD5DBF29A1D27C0092A4BF /* LICENSE */ = {isa = PBXFileReference; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
 		2FCB41F429A1D01300A519CA /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -63,7 +63,7 @@
 		2FA961882994486D00F9D5E1 /* badger */ = {
 			isa = PBXGroup;
 			children = (
-				2FA961892994486D00F9D5E1 /* badger.swift */,
+				2FA961892994486D00F9D5E1 /* Badger.swift */,
 			);
 			path = badger;
 			sourceTree = "<group>";
@@ -132,7 +132,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2FA9618A2994486D00F9D5E1 /* badger.swift in Sources */,
+				2FA9618A2994486D00F9D5E1 /* Badger.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
