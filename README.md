@@ -1,5 +1,10 @@
 # Badger prototype
 
+## What
+
+Add a text string to a PNG file for badging app icons with built branch git hash, dev cycle string, etc.  
+Uses Core Graphics and no outside dependencies.
+
 ## Status
 
 This is a prototype that seems to work on PNG files but has only been tested on PNG files.
